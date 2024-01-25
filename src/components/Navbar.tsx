@@ -1,19 +1,19 @@
 'use client'
 import Link from "next/link"
 import { linkType } from '@/types/navbarTypes';
-import { ReactElement, useEffect, useState } from "react";
+import { ReactElement, useCallback, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-const navbarContainerClass = "bg-slate-300 lg:bg-transparent fixed lg:static top-0 -right-full h-[100vh] lg:h-fit w-[70%] lg:w-fit px-8 py-4 lg:p-0 transition-[right] duration-500";
-const navbarListClass = "flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8";
-const linkClass = "text-lg antialiased after:block after:w-0 after:border-b-2 after:border-b-blue-950 after:transition-[width] after:duration-200 hover:after:w-full";
-const linkClassActive = "text-lg antialiased after:block after:w-full after:border-b-2 after:border-b-blue-950";
+const navListContainerClass = "bg-blue-100 lg:bg-transparent fixed lg:static top-0 -right-full h-[100vh] lg:h-fit w-[70%] lg:w-fit px-8 py-4 lg:p-0 transition-[right] duration-500";
+const navListClass = "flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8";
+const linkClass = "text-lg antialiased after:block after:w-0 after:opacity-0 after:border-b-2 after:border-b-slate-700 after:transition-all after:duration-200 hover:after:w-full hover:after:opacity-100";
+const linkClassActive = "text-lg antialiased after:block after:w-full after:border-b-2 after:border-b-slate-700";
 const toggleButtonClass = "block lg:hidden"
 
 function NavbarList({ pathname, links, handleToggle }: { pathname: string, links: linkType[], handleToggle: Function }): ReactElement {
   return (
-    <div id="navbar" className={navbarContainerClass}>
-      <ul className={navbarListClass}>
+    <div id="navbar-list" className={navListContainerClass}>
+      <ul className={navListClass}>
         <li className="block lg:hidden place-self-end">
           <ToggleButton show={false} handleToggle={handleToggle} />
         </li>
@@ -55,23 +55,36 @@ export default function Navbar({ links, logoSrc }: { links: linkType[], logoSrc:
   const pathname = usePathname();
   const [isNavbarHidden, setIsNavbarHidden] = useState(true);
 
-  const handleToggle = () => {
+  const handleToggle = useCallback(() => {
     setIsNavbarHidden(!isNavbarHidden)
-    const navbar = document.getElementById("navbar")
-    navbar!.classList.toggle("!right-0")
-  } 
+    const navbarList = document.getElementById("navbar-list")
+    navbarList!.classList.toggle("!right-0")
+  }, [isNavbarHidden]);
+
+
+  useEffect(() => {
+    // window.onscroll = () => {
+    //   const currentScrollPos = window.pageYOffset;
+    //   if (prevScrollpos > currentScrollPos) {
+    //     document.getElementById("navbar").style.top = "0";
+    //   } else {
+    //     document.getElementById("navbar").style.top = "-50px";
+    //   }
+    //   prevScrollpos = currentScrollPos;
+    // }
+  }, []);
 
   return (
-    <nav className="flex flex-row justify-between items-center max-w-[1440px] mx-auto px-8 relative">
-      <div>
-        <img className="w-40 md:w-44" src={logoSrc} alt="logo corporación afar" />
-      </div>
-      <NavbarList 
-        pathname={pathname} 
-        links={links} 
-        handleToggle={handleToggle}
-      />
-      <ToggleButton show={true} handleToggle={handleToggle} />
+    <nav className="bg-blue-50 bg-opacity-95 shadow-sm sticky top-0 h-20 duration-500 ease-in-out transition-[top] z-50">
+      <div className="flex flex-row justify-between items-center max-w-[1440px] h-auto mx-auto px-8 relative">
+        <img className="h-20" src={logoSrc} alt="logo corporación afar" />
+        <NavbarList 
+          pathname={pathname} 
+          links={links} 
+          handleToggle={handleToggle}
+        />
+        <ToggleButton show={true} handleToggle={handleToggle} />
+        </div>
     </nav>
   )
 }
