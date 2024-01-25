@@ -1,20 +1,20 @@
 'use client'
 import Link from "next/link"
 import { linkType } from '@/types/navbarTypes';
-import { ReactElement, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-const navbarListClass = "flex flex-col lg:flex-row items-start fixed lg:relative top-0 -right-[100%] lg:-right-0 w-[75%] lg:w-fit h-[100vh] lg:h-auto gap-6 lg:gap-8 px-10 py-5 lg:p-0 bg-slate-300 lg:bg-transparent";
-const navbarListMobileActiveClass = "flex flex-col lg:flex-row items-start fixed lg:relative top-0 -right-0 w-[75%] lg:w-fit h-[100vh] lg:h-auto gap-6 lg:gap-8 ps-10 pe-8 py-5 lg:p-0 bg-slate-300 lg:bg-transparent";
+const navbarContainerClass = "bg-slate-300 lg:bg-transparent fixed lg:static top-0 -right-full h-[100vh] lg:h-fit w-[70%] lg:w-fit px-8 py-4 lg:p-0 transition-[right] duration-500";
+const navbarListClass = "flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8";
 const linkClass = "text-lg antialiased after:block after:w-0 after:border-b-2 after:border-b-blue-950 after:transition-[width] after:duration-200 hover:after:w-full";
 const linkClassActive = "text-lg antialiased after:block after:w-full after:border-b-2 after:border-b-blue-950";
 const toggleButtonClass = "block lg:hidden"
 
-function NavbarList({ pathname, links, styles, handleToggle }: { pathname: string, links: linkType[], styles: string, handleToggle: Function }): ReactElement {
+function NavbarList({ pathname, links, handleToggle }: { pathname: string, links: linkType[], handleToggle: Function }): ReactElement {
   return (
-    <div>
-      <ul className={styles}>
-        <li className="block lg:hidden place-self-end -mb-6">
+    <div id="navbar" className={navbarContainerClass}>
+      <ul className={navbarListClass}>
+        <li className="block lg:hidden place-self-end">
           <ToggleButton show={false} handleToggle={handleToggle} />
         </li>
         {
@@ -55,15 +55,20 @@ export default function Navbar({ links, logoSrc }: { links: linkType[], logoSrc:
   const pathname = usePathname();
   const [isNavbarHidden, setIsNavbarHidden] = useState(true);
 
-  const handleToggle = () => setIsNavbarHidden(!isNavbarHidden)
+  const handleToggle = () => {
+    setIsNavbarHidden(!isNavbarHidden)
+    const navbar = document.getElementById("navbar")
+    navbar!.classList.toggle("!right-0")
+  } 
 
   return (
     <nav className="flex flex-row justify-between items-center max-w-[1440px] mx-auto px-8 relative">
-      <img className="w-40 md:w-44 h-auto" src={logoSrc} alt="logo corporación afar" />
+      <div>
+        <img className="w-40 md:w-44" src={logoSrc} alt="logo corporación afar" />
+      </div>
       <NavbarList 
         pathname={pathname} 
         links={links} 
-        styles={isNavbarHidden ? navbarListClass : navbarListMobileActiveClass} 
         handleToggle={handleToggle}
       />
       <ToggleButton show={true} handleToggle={handleToggle} />
