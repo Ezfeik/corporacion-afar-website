@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { linkType } from "@/types/navbarTypes";
 
 const logoSrc = '/logo-sin-bg-difu-480px.webp'
@@ -25,12 +26,13 @@ const links: linkType[] = [
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <header className="bg-slate-100">
+      <div className="min-h-[100vh] flex flex-col">
         <Navbar links={links} logoSrc={logoSrc} />
-      </header>
-      <main className="max-w-[1440px] mx-auto bg-slate-200 px-8">
-        {children}
-      </main>
+        <main className="max-w-[1440px] mx-auto bg-slate-100 px-8 relative -z-10 mb-auto">
+          {children}
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }
