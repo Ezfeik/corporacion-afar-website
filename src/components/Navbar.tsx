@@ -5,10 +5,10 @@ import { ReactElement, useCallback, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Container from "./Container";
 
-const navListContainerClass = "bg-gray-200 lg:bg-transparent fixed lg:static top-0 -right-full h-[100vh] lg:h-fit w-[70%] lg:w-fit px-8 py-4 lg:p-0 transition-[right] duration-500";
+const navListContainerClass = "bg-secondary-700 lg:bg-transparent fixed lg:static top-0 -right-full h-[100vh] lg:h-fit w-[70%] lg:w-fit px-8 py-4 lg:p-0 transition-[right] duration-500";
 const navListClass = "flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8";
-const linkClass = "text-lg text-gray-600 hover:text-gray-800 antialiased after:block after:w-0 after:opacity-0 after:border-b-2 after:border-b-gray-600 after:transition-all after:ease-in-out after:duration-300 hover:after:w-full hover:after:opacity-100";
-const linkClassActive = "text-lg text-gray-800 antialiased after:block after:w-full after:border-b-2 after:border-b-gray-800";
+const linkClass = "text-lg text-secondary-50 lg:text-primary-950 opacity-80 hover:opacity-100 antialiased after:block after:w-0 after:opacity-0 after:border-b-2 after:border-b-secondary-50 lg:after:border-b-primary-900 after:transition-all after:ease-in-out after:duration-300 hover:after:w-full hover:after:opacity-100";
+const linkClassActive = "text-lg text-secondary-50 lg:text-primary-950 antialiased after:block after:w-full after:border-b-2 after:border-b-secondary-50 lg:after:border-b-primary-900";
 const toggleButtonClass = "block lg:hidden"
 
 function NavbarList({ pathname, links, handleToggle }: { pathname: string, links: navLinkType[], handleToggle: Function }): ReactElement {
@@ -38,14 +38,14 @@ function ToggleButton({ show, handleToggle }: { show: boolean, handleToggle: Fun
       { 
         show ? (
           <svg width="24" height="24" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect y="10" width="27" height="3" rx="1.5" className="fill-gray-600"/>
-          <rect width="27" height="3" rx="1.5" className="fill-gray-600"/>
-          <rect y="20" width="27" height="3" rx="1.5" className="fill-gray-600"/>
+          <rect y="10" width="27" height="3" rx="1.5" className="fill-primary-800"/>
+          <rect width="27" height="3" rx="1.5" className="fill-primary-800"/>
+          <rect y="20" width="27" height="3" rx="1.5" className="fill-primary-800"/>
           </svg>
         ) : (
           <svg width="22" height="22" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect y="22.6274" width="32" height="3" rx="1.5" transform="rotate(-45 0 22.6274)" className="fill-gray-600"/>
-          <rect x="2.12134" width="32" height="3" rx="1.5" transform="rotate(45 2.12134 0)" className="fill-gray-600"/>
+          <rect y="22.6274" width="32" height="3" rx="1.5" transform="rotate(-45 0 22.6274)" className="fill-secondary-50"/>
+          <rect x="2.12134" width="32" height="3" rx="1.5" transform="rotate(45 2.12134 0)" className="fill-secondary-50"/>
           </svg>
         ) 
       }
@@ -79,8 +79,8 @@ export default function Navbar({ links, logo }: { links: navLinkType[], logo: { 
   }, []);
 
   return (
-    <nav className="bg-opacity-95 shadow-sm sticky top-0 h-20 duration-500 ease-in-out transition-[top] z-50">
-      <Container bgColorClass="bg-gray-100">
+    <nav className="bg-opacity-95 shadow-md sticky top-0 h-20 duration-500 ease-in-out transition-[top] z-50">
+      <Container bgColorClass="bg-primary-50">
         <div className="flex flex-row justify-between items-center h-auto relative">
           <img className="h-20" src={logo.src} alt={logo.alt} />
           <NavbarList 
