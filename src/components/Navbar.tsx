@@ -38,9 +38,9 @@ function ToggleButton({ show, handleToggle }: { show: boolean, handleToggle: Fun
       { 
         show ? (
           <svg width="24" height="24" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect y="10" width="27" height="3" rx="1.5" className="fill-primary-800"/>
-          <rect width="27" height="3" rx="1.5" className="fill-primary-800"/>
-          <rect y="20" width="27" height="3" rx="1.5" className="fill-primary-800"/>
+          <rect y="10" width="27" height="3" rx="1.5" className="fill-primary-900"/>
+          <rect width="27" height="3" rx="1.5" className="fill-primary-900"/>
+          <rect y="20" width="27" height="3" rx="1.5" className="fill-primary-900"/>
           </svg>
         ) : (
           <svg width="22" height="22" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
