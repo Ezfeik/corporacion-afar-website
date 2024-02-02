@@ -1,11 +1,11 @@
 import React from 'react'
 
 function SectionTitle({ colorClass = "text-secondary-500", children }: { colorClass?: string, children: string }) {
-  const textStyle = "py-8 text-4xl font-bold antialiased"
-  const style = colorClass ? textStyle + " " + colorClass : textStyle
+  const textStyleClass = "py-6 lg:py-10 text-4xl text-center font-bold antialiased"
+  const styleClass = colorClass ? textStyleClass + " " + colorClass : textStyleClass
 
   return (
-    <h1 className={style}>{ children }</h1>
+    <h1 className={styleClass}>{ children }</h1>
   )
 }
 
