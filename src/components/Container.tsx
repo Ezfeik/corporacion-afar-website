@@ -1,9 +1,10 @@
 import React, { ReactElement } from 'react'
 
-function Container({ bgColorClass, children }: { bgColorClass: string, children: ReactElement }) {
+function Container({ bgColorClass, bgImgClass, children }: { bgColorClass?: string, bgImgClass?: string, children: ReactElement }) {
   return (
-    <div className={bgColorClass}>
-      <div className='max-w-[1440px] mx-auto px-8'>
+    <div className={bgColorClass ?? "relative"}>
+      { bgImgClass && <div className={bgImgClass + " absolute top-0 left-0 w-full h-full"}></div> }
+      <div className='max-w-[1440px] mx-auto px-6 lg:px-12'>
         {children}
       </div>
     </div>
