@@ -8,14 +8,12 @@ import Container from './Container'
 import PhoneIcon from './icons/Phone'
 import MailIcon from './icons/Mail'
 
-// TODO: Add responsiveness
-
 function Footer() {
   return (
     <footer>
       <Container bgColorClass='bg-primary-100'>
         <>
-          <div className='grid grid-cols-1 lg:grid-cols-3 max-w-[1440px] text-primary-950 py-9 border-b-[thin] border-b-primary-950'>
+          <div className='grid grid-cols-1 lg:grid-cols-3 max-w-[1440px] text-primary-950 py-8 border-b-[thin] border-b-primary-950'>
             <div className='mb-4 lg:mb-0'>
               <img className='h-28 lg:h-32' src={logoAfar.src} alt={logoAfar.alt} />
               <p className='text-sm pe-32'>
