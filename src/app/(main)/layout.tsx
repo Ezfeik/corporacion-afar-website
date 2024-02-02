@@ -10,7 +10,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
     <>
       <div className="min-h-[100vh] flex flex-col">
         <Navbar links={navLinks} logo={logoAfar} />
-        <main className="max-w-[1440px] mx-auto bg-slate-100 px-8 relative -z-10 mb-auto">
+        <main className="w-full relative -z-10 mb-auto">
           {children}
         </main>
         <Footer />
