@@ -1,14 +1,13 @@
-import React from 'react'
-import Link from 'next/link'
-import { logoAfar } from '@/constants/images'
-import { navLinks } from '@/constants/links'
-import InstagramIcon from './icons/Instagram'
-import FacebookIcon from './icons/Facebook'
-import Container from './Container'
-import PhoneIcon from './icons/Phone'
-import MailIcon from './icons/Mail'
+import React from 'react';
+import Link from 'next/link';
+import { logoAfar } from '@/constants/images';
+import { navLinks } from '@/constants/links';
+import Container from './Container';
+import PhoneIcon from './icons/Phone';
+import MailIcon from './icons/Mail';
+import SocialNetworks from './SocialNetworks';
 
-function Footer() {
+export function Footer() {
   return (
     <footer>
       <Container bgColorClass='bg-primary-100'>
@@ -24,38 +23,31 @@ function Footer() {
             <div className='mb-4 lg:mb-0'>
               <h2 className='text-lg font-bold mb-2'>Links</h2>
               <ul className='flex flex-col gap-2'>
-                { navLinks.map((link, index) => {
+                {navLinks.map((link, index) => {
                   return (
                     <li key={index}>
                       <Link href={link.href}>
                         {link.name}
                       </Link>
                     </li>
-                  )
-                }) }
+                  );
+                })}
               </ul>
             </div>
             <div>
               <h2 className='text-lg font-bold mb-2'>Contacto</h2>
               <ul className='flex flex-col gap-2 mb-4'>
                 <li className='flex flex-row gap-2'>
-                  <MailIcon color={'stroke-primary-950'} width={24} height={24} />contacto@corporacionafar.cl
+                  <MailIcon colorClass={'stroke-primary-950'} width={24} height={24} />contacto@corporacionafar.cl
                 </li>
                 <li className='flex flex-row gap-2'>
-                  <PhoneIcon color={'stroke-primary-950'} width={24} height={24} />+56-91234578
+                  <PhoneIcon colorClass={'stroke-primary-950'} width={24} height={24} />+56-91234578
                 </li>
                 <li className='flex flex-row gap-2'>
-                  <PhoneIcon color={'stroke-primary-950'} width={24} height={24} />+56-91234578
+                  <PhoneIcon colorClass={'stroke-primary-950'} width={24} height={24} />+56-91234578
                 </li>
               </ul>
-              <div className='flex flex-row gap-2'>
-                <Link href='https://www.instagram.com/corporacion_afar/' target='_blank'>
-                  <InstagramIcon color={'fill-primary-950'} width={26} height={26} />
-                </Link>
-                <Link href='https://www.facebook.com/corporacionafar/' target='_blank'>
-                  <FacebookIcon color={'fill-primary-950'} width={26} height={26} />
-                </Link>
-              </div>
+              <SocialNetworks fillColorClass="fill-primary-950" />
             </div>
           </div>
           <div className="max-w-[1440px] text-gray-500 mx-auto text-sm py-4">
@@ -64,7 +56,7 @@ function Footer() {
         </>
       </Container>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
