@@ -10,11 +10,11 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'img-logo': 'url("/logo.webp")',
-        'img-hands': 'url("/backgrounds/hands.jpg")',
-        'img-hands-loop': 'url("/backgrounds/hands-loop.jpg")',
-        'img-violence': 'url("/backgrounds/violence.jpg")',
-        'img-books': 'url("/backgrounds/books.jpg")',
-        'img-talk': 'url("/backgrounds/talk.jpg")',
+        'img-hands': 'url("/img/backgrounds/hands.jpg")',
+        'img-hands-loop': 'url("/img/backgrounds/hands-loop.jpg")',
+        'img-violence': 'url("/img/backgrounds/violence.jpg")',
+        'img-books': 'url("/img/backgrounds/books.jpg")',
+        'img-talk': 'url("/img/backgrounds/talk.jpg")',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
