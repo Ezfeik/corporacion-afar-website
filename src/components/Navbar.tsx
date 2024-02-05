@@ -79,10 +79,10 @@ export default function Navbar({ links, logo }: { links: navLinkType[], logo: { 
   }, []);
 
   return (
-    <nav className="bg-opacity-95 shadow-md sticky top-0 h-20 duration-500 ease-in-out transition-[top] z-50">
+    <nav className="bg-opacity-95 shadow-md sticky top-0 h-16 lg:h-20 duration-500 ease-in-out transition-[top] z-50">
       <Container bgColorClass="bg-primary-50">
-        <div className="flex flex-row justify-between items-center h-auto relative">
-          <img className="h-20" src={logo.src} alt={logo.alt} />
+        <div className="flex flex-row justify-between items-center relative">
+          <img className="h-16 lg:h-20" src={logo.src} alt={logo.alt} />
           <NavbarList 
             pathname={pathname} 
             links={links} 
