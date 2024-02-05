@@ -12,7 +12,7 @@ function Page() {
         <SectionTitle>Contacto</SectionTitle>
         <div className="grid lg:grid-cols-2 text-primary-950">
           <div className="border-b-2 border-b-primary-100 lg:border-b-0 lg:border-e-2 lg:border-e-primary-100 py-4 lg:px-24">
-            <h2 className="font-bold text-4xl mb-4">Estamos Contigo</h2>
+            <h2 className="font-bold text-3xl mb-4">Estamos Contigo</h2>
             <p className="text-xl leading-relaxed">Estamos aquí para ofrecerte apoyo, comprensión y escucha en cualquier momento. Tu bienestar es nuestra prioridad.</p>
           </div>
           <div className="py-4 lg:px-24">
