@@ -4,7 +4,7 @@ function Container({ bgColorClass, bgImgClass, children }: { bgColorClass?: stri
   return (
     <div className={bgColorClass ?? "relative"}>
       { bgImgClass && <div className={bgImgClass + " absolute top-0 left-0 w-full h-full"}></div> }
-      <div className='max-w-[1440px] mx-auto px-6 lg:px-12'>
+      <div className='max-w-[1440px] mx-auto px-4 lg:px-12'>
         {children}
       </div>
     </div>
