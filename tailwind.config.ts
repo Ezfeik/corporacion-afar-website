@@ -59,6 +59,12 @@ const config: Config = {
           '900': '#085f2b',
           '950': '#003616',
         },
+      },
+      keyframes: {
+        'fade-in': {
+          '0%': { opacity: '0', position: 'relative', top: '-8px', pointerEvents: 'none' },
+          '100%': { opacity: '1', position: 'relative', top: '0', pointerEvents: 'auto' }
+        }
       }
     },
   },
