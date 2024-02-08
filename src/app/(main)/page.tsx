@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import EndPhrase from '../../components/EndPhrase';
 
 export default function Page() {
   return (
@@ -21,9 +22,7 @@ export default function Page() {
           </div>
         </section>
       </Container>
-      <Container bgColorClass="bg-white">
-        <h2 className="py-10 text-4xl font-bold text-center text-secondary-500">&quot;Nada es tan fuerte como la ayuda a través de la comprensión&quot;</h2>
-      </Container>
+      <EndPhrase textColorClass="text-secondary-500">Nada es tan fuerte como la ayuda a través de la comprensión</EndPhrase>
     </>
   );
 }
