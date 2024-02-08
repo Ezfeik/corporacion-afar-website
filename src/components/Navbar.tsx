@@ -4,6 +4,8 @@ import { navLinkType } from '@/types/navbarTypes';
 import { ReactElement, useCallback, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Container from "./Container";
+import Hamburger from "./icons/Hamburger";
+import Times from "./icons/Times";
 
 const navListContainerClass = "bg-secondary-700 lg:bg-transparent fixed lg:static top-0 -right-full h-[100vh] lg:h-fit w-[70%] lg:w-fit px-8 py-4 lg:p-0 transition-[right] duration-500";
 const navListClass = "flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8";
@@ -11,42 +13,40 @@ const linkClass = "text-lg text-secondary-50 lg:text-primary-950 opacity-80 hove
 const linkClassActive = "text-lg text-secondary-50 lg:text-primary-950 antialiased after:block after:w-full after:border-b-2 after:border-b-secondary-50 lg:after:border-b-primary-900";
 const toggleButtonClass = "block lg:hidden"
 
-function NavbarList({ pathname, links, handleToggle }: { pathname: string, links: navLinkType[], handleToggle: Function }): ReactElement {
+function NavbarList({ pathname, links, handleToggle, isNavbarHidden }: { pathname: string, links: navLinkType[], handleToggle: Function, isNavbarHidden: boolean }): ReactElement {
+  const hideOverlay = isNavbarHidden ? " hidden" : ""
+
   return (
-    <div id="navbar-list" className={navListContainerClass}>
-      <ul className={navListClass}>
-        <li className="block lg:hidden place-self-end mt-3">
-          <ToggleButton show={false} handleToggle={handleToggle} />
-        </li>
-        {
-          links.map(( link: navLinkType, index: number ) => (
-            <li key={ index }>
-              <Link className={ pathname === link.href ? linkClassActive : linkClass } href={ link.href }>
-                { link.name }
-              </Link>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
+    <>
+      <div className={"bg-transparent lg:hidden w-[100vh] h-[100vh] fixed top-0 right-0" + hideOverlay} id="overlay" onClick={() => handleToggle(true)}></div>
+      <div id="navbar-list" className={navListContainerClass}>
+        <ul className={navListClass}>
+          <li className="block lg:hidden place-self-end mt-2 -me-3">
+            <ToggleButton show={false} handleToggle={handleToggle} isNavbarHidden={isNavbarHidden} />
+          </li>
+          {
+            links.map(( link: navLinkType, index: number ) => (
+              <li key={ index }>
+                <Link onClick={() => handleToggle(true)} className={ pathname === link.href ? linkClassActive : linkClass } href={ link.href }>
+                  { link.name }
+                </Link>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </>
   );
 }
 
-function ToggleButton({ show, handleToggle }: { show: boolean, handleToggle: Function}): ReactElement {
+function ToggleButton({ show, handleToggle, isNavbarHidden }: { show: boolean, handleToggle: Function, isNavbarHidden: boolean }): ReactElement {
   return (
-    <button onClick={() => handleToggle()} className={toggleButtonClass}>
+    <button onClick={() => handleToggle(!isNavbarHidden)} className={toggleButtonClass}>
       { 
         show ? (
-          <svg width="24" height="24" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect y="10" width="27" height="3" rx="1.5" className="fill-primary-900"/>
-          <rect width="27" height="3" rx="1.5" className="fill-primary-900"/>
-          <rect y="20" width="27" height="3" rx="1.5" className="fill-primary-900"/>
-          </svg>
+          <Hamburger width={22} height={22} colorClass="fill-primary-900" />
         ) : (
-          <svg width="22" height="22" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect y="22.6274" width="32" height="3" rx="1.5" transform="rotate(-45 0 22.6274)" className="fill-secondary-50"/>
-          <rect x="2.12134" width="32" height="3" rx="1.5" transform="rotate(45 2.12134 0)" className="fill-secondary-50"/>
-          </svg>
+          <Times width={20} height={20} colorClass="fill-secondary-50" />
         ) 
       }
       
@@ -59,23 +59,14 @@ export default function Navbar({ links, logo }: { links: navLinkType[], logo: { 
   const pathname = usePathname();
   const [isNavbarHidden, setIsNavbarHidden] = useState(true);
 
-  const handleToggle = useCallback(() => {
-    setIsNavbarHidden(!isNavbarHidden)
-    const navbarList = document.getElementById("navbar-list")
-    navbarList!.classList.toggle("!right-0")
-  }, [isNavbarHidden]);
-
-
-  useEffect(() => {
-    // window.onscroll = () => {
-    //   const currentScrollPos = window.pageYOffset;
-    //   if (prevScrollpos > currentScrollPos) {
-    //     document.getElementById("navbar").style.top = "0";
-    //   } else {
-    //     document.getElementById("navbar").style.top = "-50px";
-    //   }
-    //   prevScrollpos = currentScrollPos;
-    // }
+  const handleToggle = useCallback((hide: boolean) => {
+    setIsNavbarHidden(hide);
+    const navbarList = document.getElementById("navbar-list");
+    if (hide) {
+      navbarList!.classList.remove("!right-0");
+    } else {
+      navbarList!.classList.add("!right-0");
+    }
   }, []);
 
   return (
@@ -87,8 +78,9 @@ export default function Navbar({ links, logo }: { links: navLinkType[], logo: { 
             pathname={pathname} 
             links={links} 
             handleToggle={handleToggle}
+            isNavbarHidden={isNavbarHidden}
           />
-          <ToggleButton show={true} handleToggle={handleToggle} />
+          <ToggleButton show={true} handleToggle={handleToggle} isNavbarHidden={isNavbarHidden} />
         </div>
       </Container>
     </nav>
