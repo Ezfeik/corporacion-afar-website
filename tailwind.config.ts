@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'img-logo': 'url("/logo.webp")',
+        'img-logo': 'url("/img/logo.webp")',
         'img-hands': 'url("/img/backgrounds/hands.jpg")',
         'img-hands-loop': 'url("/img/backgrounds/hands-loop.jpg")',
         'img-violence': 'url("/img/backgrounds/violence.jpg")',
