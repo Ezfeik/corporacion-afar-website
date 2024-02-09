@@ -1,5 +1,5 @@
 import Container from "@/components/Container";
-import EndPhrase from '../../components/EndPhrase';
+import EndPhrase from '@/components/sections/EndPhrase';
 
 export default function Page() {
   return (
