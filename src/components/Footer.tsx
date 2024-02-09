@@ -12,7 +12,7 @@ export function Footer() {
     <footer>
       <Container bgColorClass='bg-primary-100'>
         <>
-          <div className='grid grid-cols-1 lg:grid-cols-3 items-center max-w-[1440px] text-primary-950 py-6 border-b-[thin] border-b-primary-300'>
+          <div className='grid grid-cols-1 lg:grid-cols-3 items-center max-w-[1440px] text-primary-950 py-6 border-b-[thin] border-b-primary-900'>
             <div className='mb-4 lg:mb-0'>
               <img className='h-28 lg:h-32' src={logoAfar.src} alt={logoAfar.alt} />
               <p className='text-sm pe-32'>
@@ -50,7 +50,7 @@ export function Footer() {
               <SocialNetworks fillColorClass="fill-primary-950" />
             </div>
           </div>
-          <div className="max-w-[1440px] text-gray-500 mx-auto text-sm py-4">
+          <div className="max-w-[1440px] text-gray-400 mx-auto text-sm py-4">
             © 2024 Corporación Afar. Todos los derechos reservados.
           </div>
         </>
