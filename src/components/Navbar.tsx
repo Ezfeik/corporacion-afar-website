@@ -1,16 +1,16 @@
 'use client'
 import Link from "next/link"
 import { navLinkType } from '@/types/navbarTypes';
-import { ReactElement, useCallback, useEffect, useState } from "react";
+import { ReactElement, useCallback, useState } from "react";
 import { usePathname } from "next/navigation";
 import Container from "./Container";
 import Hamburger from "./icons/Hamburger";
 import Times from "./icons/Times";
 
-const navListContainerClass = "bg-secondary-700 lg:bg-transparent fixed lg:static top-0 -right-full h-[100vh] lg:h-fit w-[70%] lg:w-fit px-8 py-4 lg:p-0 transition-[right] duration-500";
+const navListContainerClass = "bg-secondary-600 lg:bg-transparent fixed lg:static top-0 -right-full h-[100vh] lg:h-fit w-[70%] lg:w-fit px-8 py-4 lg:p-0 transition-[right] duration-500";
 const navListClass = "flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8";
-const linkClass = "text-lg text-secondary-50 lg:text-primary-950 opacity-80 hover:opacity-100 antialiased after:block after:w-0 after:opacity-0 after:border-b-2 after:border-b-secondary-50 lg:after:border-b-primary-900 after:transition-all after:ease-in-out after:duration-300 hover:after:w-full hover:after:opacity-100";
-const linkClassActive = "text-lg text-secondary-50 lg:text-primary-950 antialiased after:block after:w-full after:border-b-2 after:border-b-secondary-50 lg:after:border-b-primary-900";
+const linkClass = "text-lg text-secondary-50 lg:text-primary-900 opacity-70 hover:opacity-100 antialiased after:block after:w-0 after:opacity-0 after:border-b-2 after:border-b-secondary-50 lg:after:border-b-primary-900 after:transition-all after:ease-in-out after:duration-300 hover:after:w-full hover:after:opacity-100";
+const linkActiveClass = "text-lg text-secondary-50 lg:text-primary-900 antialiased after:block after:w-full after:border-b-2 after:border-b-secondary-50 lg:after:border-b-primary-900";
 const toggleButtonClass = "block lg:hidden"
 
 function NavbarList({ pathname, links, handleToggle, isNavbarHidden }: { pathname: string, links: navLinkType[], handleToggle: Function, isNavbarHidden: boolean }): ReactElement {
@@ -27,7 +27,7 @@ function NavbarList({ pathname, links, handleToggle, isNavbarHidden }: { pathnam
           {
             links.map(( link: navLinkType, index: number ) => (
               <li key={ index }>
-                <Link onClick={() => handleToggle(true)} className={ pathname === link.href ? linkClassActive : linkClass } href={ link.href }>
+                <Link onClick={() => handleToggle(true)} className={ pathname === link.href ? linkActiveClass : linkClass } href={ link.href }>
                   { link.name }
                 </Link>
               </li>
