@@ -1,7 +1,7 @@
 import React from 'react'
 
 function SectionTitle({ bgImgClass, textColorClass = "text-secondary-500", decoratorColorClass, children }: { bgImgClass?: string, textColorClass?: string, decoratorColorClass?: string, children: string }) {
-  const textStyleClass = "flex relative py-6 lg:py-10 text-3xl lg:text-4xl text-center font-bold antialiased w-fit mx-auto"
+  const textStyleClass = "flex relative text-3xl lg:text-4xl text-center font-bold antialiased w-fit mx-auto"
   let styleClass = textStyleClass + " " + textColorClass;
   styleClass = bgImgClass ? styleClass + " " + bgImgClass : styleClass
 
