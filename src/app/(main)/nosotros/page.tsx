@@ -6,8 +6,41 @@ import HeartIcon from '@/components/icons/Heart'
 import SectionTitle from '@/components/sections/SectionTitle'
 import React, { ReactElement } from 'react'
 import { handsImg, talkImg } from '@/constants/images'
-import AnimationWrapper from '@/components/animations/AnimationWrapper';
 import ImgText from '@/components/sections/ImgText'
+
+
+type MemberType = {
+  name: string;
+  role: string;
+  email: string;
+}
+
+const members: MemberType[] = [
+  {name: 'Carla Gallardo Jara', role: 'Presidenta', email: 'c.gallardo@corporacionafar.cl'},
+  {name: 'Ximena Mancilla Oyarzo', role: 'Vicepresidenta', email: 'x.mancilla@corporacionafar.cl'},
+  {name: 'Moira Cuevas Villouta', role: 'Directora', email: 'm.cuevas@corporacionafar.cl'},
+]
+
+const TeamCardList = function({ members }: { members: MemberType[] }) {
+  return (
+    <ul className='grid grid-cols-3'>
+      { members.map((member) => <TeamCard key={member.name} member={member} />) }
+    </ul>
+  )
+}
+
+const TeamCard = function({ member }: { member: MemberType }) {
+  return (
+    <li className='mx-auto py-12 px-8 bg-primary-50 shadow-md'>
+      <img className='mx-auto border-2 border-primary-900 rounded-full w-40 h-40 mb-8' src="/img/favicon.png" alt="perfil sin imagen" />
+      <div className='mx-auto text-center'>
+        <h3 className='text-xl'>{member.name}</h3>
+        <p className='italic border-b-2 pb-2 mb-2'>{member.role}</p>
+        <a className='font-bold text-primary-700' href={`mailto:${member.email}`}>{member.email}</a>
+      </div>
+    </li>
+  )
+}
 
 const AboutUsContainer = function() {
   return (
@@ -42,31 +75,43 @@ function Page() {
   return (
     <section>
       <Container bgImgClass='bg-img-logo bg-center bg-cover opacity-[3%]'>
-        <>
+        <div className='py-24'>
           <SectionTitle textColorClass="text-secondary-500" decoratorColorClass="bg-secondary-500">Sobre Nosotros</SectionTitle>
-          <p className='w-1/2 mx-auto text-xl text-center pb-12 text-gray-800'>
+          <p className='w-3/5 mx-auto mt-12 text-2xl leading-relaxed text-center text-gray-800'>
             Somos una corporación privada, sin fines de lucro que protege y defiende los derechos de las víctimas de violencia intrafamiliar hacia
             mujeres, niños, adolescentes, hombres, padres.
           </p>
-        </>
+        </div>
       </Container>
       <Container bgColorClass='bg-secondary-50'>
         <AboutUsContainer />
       </Container>
       <Container>
-        <>
-          <ImgText 
-            img={handsImg} 
-            title='Lorem ipsum dolor sit' 
-            text={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore, reprehenderit dolorem itaque voluptate qui earum praesentium officiis excepturi enim, aliquid incidunt laborum doloribus nulla consectetur exercitationem dolorum consequatur adipisci!'} 
-          />
-          <ImgText 
-            img={talkImg} 
-            title='Lorem ipsum dolor sit' 
-            text={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore, reprehenderit dolorem itaque voluptate qui earum praesentium officiis excepturi enim, aliquid incidunt laborum doloribus nulla consectetur exercitationem dolorum consequatur adipisci!'} 
-            reverse
-          />
-        </>
+        <div className='py-24'>
+          <div>
+            <ImgText 
+              img={talkImg} 
+              title='Apoyamos'
+              text={'Damos atención a víctimas de violencia de cualquier fuente mediante un modelo de intervención integral, con énfasis en la prevención y acompañado de una reparación y restauración del grupo familiar.'}  
+            />
+          </div>
+          <div className='mt-16'>
+            <ImgText 
+              img={handsImg} 
+              title='Concientizamos' 
+              text={'Promovemos proyectos a importantes entidades, realizamos capacitaciones del ambito psicosocial / jurídico y talleres preventivos de violencia dirigidas a todo público.'} 
+              reverse
+            />
+          </div>
+        </div>
+      </Container>
+      <Container>
+        <div className='pb-24'>
+          <SectionTitle textColorClass="text-secondary-500" decoratorColorClass="bg-secondary-500">Nuestro Equipo</SectionTitle>
+          <div className='pt-14'>
+            <TeamCardList members={members} />
+          </div>
+        </div>
       </Container>
     </section>
   )
