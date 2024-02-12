@@ -64,7 +64,19 @@ const config: Config = {
         'fade-in': {
           '0%': { opacity: '0', position: 'relative', top: '-8px', pointerEvents: 'none' },
           '100%': { opacity: '1', position: 'relative', top: '0', pointerEvents: 'auto' }
-        }
+        },
+        'fade-in-left': {
+          '0%': { opacity: '0', position: 'relative', left: '-16px', pointerevents: 'none' },
+          '100%': { opacity: '1', position: 'relative', left: '0', pointerevents: 'auto' }
+        },
+        'fade-in-right': {
+          '0%': { opacity: '0', position: 'relative', left: '16px', pointerevents: 'none' },
+          '100%': { opacity: '1', position: 'relative', left: '0', pointerevents: 'auto' }
+        },
+        'fade-in-up': {
+          '0%': { opacity: '0', position: 'relative', top: '8px', pointerevents: 'none' },
+          '100%': { opacity: '1', position: 'relative', top: '0', pointerevents: 'auto' }
+        },
       }
     },
   },
