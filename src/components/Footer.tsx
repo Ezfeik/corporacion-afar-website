@@ -38,13 +38,13 @@ export function Footer() {
               <h2 className='text-lg font-bold mb-2'>Contacto</h2>
               <ul className='flex flex-col gap-2 mb-4'>
                 <li className='flex flex-row gap-2'>
-                  <MailIcon colorClass={'stroke-primary-950'} width={22} height={24} />contacto@corporacionafar.cl
+                  <MailIcon colorClass={'stroke-primary-950'} width='w-6' height='h-6' />contacto@corporacionafar.cl
                 </li>
                 <li className='flex flex-row gap-2'>
-                  <PhoneIcon colorClass={'stroke-primary-950'} width={22} height={22} />+56-91234578
+                  <PhoneIcon colorClass={'stroke-primary-950'} width='w-6' height='h-6' />+56-91234578
                 </li>
                 <li className='flex flex-row gap-2'>
-                  <PhoneIcon colorClass={'stroke-primary-950'} width={22} height={22} />+56-91234578
+                  <PhoneIcon colorClass={'stroke-primary-950'} width='w-6' height='h-6' />+56-91234578
                 </li>
               </ul>
               <SocialNetworks fillColorClass="fill-primary-950" />

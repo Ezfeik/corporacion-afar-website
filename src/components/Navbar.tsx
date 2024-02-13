@@ -44,9 +44,9 @@ function ToggleButton({ show, handleToggle, isNavbarHidden }: { show: boolean, h
     <button onClick={() => handleToggle(!isNavbarHidden)} className={toggleButtonClass}>
       { 
         show ? (
-          <Hamburger width={22} height={22} colorClass="fill-primary-900" />
+          <Hamburger width='w-6' height='h-6' colorClass="fill-primary-900" />
         ) : (
-          <Times width={20} height={20} colorClass="fill-secondary-50" />
+          <Times width='w-5' height='h-5' colorClass="fill-secondary-50" />
         ) 
       }
       
