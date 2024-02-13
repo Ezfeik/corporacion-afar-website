@@ -16,7 +16,7 @@ function ImgText({ img, title, titleColorClass = 'text-gray-800', text, textColo
     <div className='grid grid-cols-1 lg:grid-cols-2'>
       <img className={`mx-auto brightness-75 lg:w-4/5 ${reverse ? 'order-1 lg:order-2' : 'order-1'}`} src={img.src} alt={img.alt} />
         <div className={`w-full lg:w-2/3 mx-auto ${reverse ? 'order-2 lg:order-1' : 'order-2'}`}>
-          <AnimationWrapper initialClass='opacity-0' animationClass={reverse ? 'animate-[800ms_fade-in-left_ease-in-out_forwards]' : 'animate-[800ms_fade-in-right_ease-in-out_forwards]'} threshold={0.4}>
+          <AnimationWrapper initialClass='opacity-0' animationClass={reverse ? 'lg:animate-[800ms_fade-in-left_ease-in-out_forwards]' : 'lg:animate-[800ms_fade-in-right_ease-in-out_forwards]'} threshold={0.4}>
             <>
               <h3 className={`${titleColorClass} text-3xl lg:text-4xl font-bold text-center text-gray-800 py-8 lg:py-12`}>{title}</h3>
               <p className={`${textColorClass} text-xl lg:text-2xl leading-relaxed`}>{text}</p>

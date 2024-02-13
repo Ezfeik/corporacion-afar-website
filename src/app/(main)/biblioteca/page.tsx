@@ -49,18 +49,18 @@ function Page() {
           <div className='py-12'>
             <SectionTitle textColorClass="text-tertiary-600" decoratorColorClass="bg-tertiary-600">Biblioteca Afar</SectionTitle>
           </div>
-          <AnimationWrapper initialClass='opacity-0' animationClass="animate-[700ms_ease-in-out_forwards_fade-in]">
+          <AnimationWrapper initialClass='opacity-0' animationClass="lg:animate-[700ms_ease-in-out_forwards_fade-in]">
             <p className="relative text-center text-xl lg:text-2xl text-tertiary-50 mb-12">
               Les dejamos a su disposición en formato PDF, una recopilación de guías en apoyo a victimas
               de malos tratos, especializada en temas de género.
             </p>
           </AnimationWrapper>
-          <AnimationWrapper initialClass="opacity-0 pointer-events-none" animationClass="animate-[700ms_ease-in-out_750ms_forwards_fade-in]">
+          <AnimationWrapper initialClass="opacity-0 pointer-events-none" animationClass="lg:animate-[700ms_ease-in-out_750ms_forwards_fade-in]">
             <div className="lg:pb-12">
               <BookList bookList={mockData} />
             </div>
           </AnimationWrapper>
-          <AnimationWrapper initialClass="opacity-0" animationClass="animate-[800ms_ease-in-out_forwards_fade-in]" threshold={1}>
+          <AnimationWrapper initialClass="opacity-0" animationClass="lg:animate-[800ms_ease-in-out_forwards_fade-in]" threshold={1}>
             <EndPhrase textColorClass='relative text-tertiary-600'>La lectura hace a la perfección</EndPhrase>
           </AnimationWrapper>
         </>
