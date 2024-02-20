@@ -14,7 +14,7 @@ function Page() {
         <div className='my-10 lg:my-12'>
           <SectionTitle textColorClass='text-primary-800' decoratorColorClass='bg-primary-800'>Contacto</SectionTitle>
         </div>
-        <AnimationWrapper initialClass="opacity-0 pointer-events-none" animationClass="lg:animate-[700ms_ease-in-out_forwards_fade-in]">
+        <AnimationWrapper initialClass="lg:opacity-0 lg:pointer-events-none" animationClass="lg:animate-[700ms_ease-in-out_forwards_fade-in]">
           <div className="grid lg:grid-cols-2 text-primary-950">
             <div className="border-b-2 border-b-primary-100 lg:border-b-0 lg:border-e-2 lg:border-e-primary-100 lg:px-24 pb-6">
               <h2 className="font-bold text-2xl lg:text-3xl mb-4">Estamos Contigo</h2>
