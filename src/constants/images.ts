@@ -4,7 +4,7 @@ export const logoAfar = {
   src: '/img/logo-sin-bg-difu-480px.webp',
   alt: 'logo Corporación Afar'
 } 
-export const handsImg = {
+export const handsLoopImg = {
   src: '/img/backgrounds/hands-loop.jpg',
   alt: 'Imagen de manos unidas formando una estrella'
 } 
