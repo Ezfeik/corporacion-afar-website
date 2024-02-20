@@ -12,15 +12,15 @@ export function Footer() {
     <footer>
       <Container bgColorClass='bg-primary-100'>
         <>
-          <div className='grid grid-cols-1 lg:grid-cols-3 items-center max-w-[1440px] text-primary-950 py-6 border-b-[thin] border-b-primary-900'>
-            <div className='mb-4 lg:mb-0'>
-              <img className='h-28 lg:h-32' src={logoAfar.src} alt={logoAfar.alt} />
-              <p className='text-sm pe-32'>
+          <div className='grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-0 lg:justify-items-center py-6 text-primary-950 border-b-[thin] border-b-primary-900'>
+            <div className='pe-12'>
+              <img src={logoAfar.src} alt={logoAfar.alt} />
+              <p className='text-md lg:text-sm'>
                 Somos una corporación privada, sin fines de lucro, que defiende
                 los derechos de las víctimas de violencia intrafamiliar.
               </p>
             </div>
-            <div className='mb-4 lg:mb-0'>
+            <div>
               <h2 className='text-lg font-bold mb-2'>Links</h2>
               <ul className='flex flex-col gap-2'>
                 {navLinks.map((link, index) => {
@@ -32,6 +32,13 @@ export function Footer() {
                     </li>
                   );
                 })}
+              </ul>
+            </div>
+            <div>
+              <h2 className='text-lg font-bold mb-2'>Documentos</h2>
+              <ul className='flex flex-col gap-2'>
+                <li><Link target='_blank' href="#">Organigrama</Link></li>
+                <li><Link target='_blank' href="#">Modelo prevención del delito</Link></li>
               </ul>
             </div>
             <div>
@@ -50,7 +57,7 @@ export function Footer() {
               <SocialNetworks fillColorClass="fill-primary-950" />
             </div>
           </div>
-          <div className="max-w-[1440px] text-gray-400 mx-auto text-sm py-4">
+          <div className="text-gray-400 mx-auto text-sm py-4">
             © 2024 Corporación Afar. Todos los derechos reservados.
           </div>
         </>
