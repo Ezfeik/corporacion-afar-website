@@ -4,37 +4,7 @@ import Container from "@/components/Container";
 import EndPhrase from '@/components/sections/EndPhrase';
 import { posters } from '@/constants/images';
 import { imageType } from "@/types/imgTypes";
-import { handsImg } from "@/constants/images";
-
-const NewsCardList = function() {
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-24">
-      <NewsCard date={new Date('2021-12-21')} title={'Titulo titulero'} cover={handsImg} text={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, placeat. Sed inventore reiciendis eum quia, harum nemo? Quaerat, illo neque!'} />
-      <NewsCard date={new Date('2021-12-21')} title={'Titulo titulero'} cover={handsImg} text={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, placeat. Sed inventore reiciendis eum quia, harum nemo? Quaerat, illo neque!'} />
-      <NewsCard date={new Date('2021-12-21')} title={'Titulo titulero'} cover={handsImg} text={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, placeat. Sed inventore reiciendis eum quia, harum nemo? Quaerat, illo neque!'} />
-    </div>
-  )
-}
-
-type NewsCardType = {
-  date: Date;
-  title: string;
-  cover: imageType;
-  text: string;
-}
-
-const NewsCard = function( { date, title, cover, text }: NewsCardType) {
-  return (
-    <div className="bg-primary-50">
-      <img className="max-h-72 w-full object-cover" src={cover.src} alt={cover.alt}></img>
-      <div className="px-8 pt-4 pb-8">
-        <h2 className="text-2xl font-bold">{title}</h2>
-        <p className="text-gray-500 text-sm mb-4">{date.toLocaleString('es-cl', { day: 'numeric', month: 'numeric', year: 'numeric' })}</p>
-        <p>{text}</p>
-      </div>
-    </div>
-  )
-}
+import { IndexNewsCardList } from "@/components/sections/IndexNewsCardList";
 
 const PosterGallery = function({ posters }: { posters: { [key: string]: imageType } }) {
   return (
@@ -63,17 +33,17 @@ export default function Page() {
   return (
     <>
       <Container bgImgClass="bg-img-hands bg-center bg-cover grayscale brightness-[40%]">
-        <section className="py-28 relative">
-          <div className="w-[70%]">
-            <h1 className="text-5xl font-bold text-secondary-500 mb-14">En contra de la violencia</h1>
-            <p className="text-4xl text-white leading-relaxed">Creemos en el poder transformador de la comunicación, el don de saber escuchar, la toma de conciencia, la empatía y apoyo entre seres humanos.</p>
-          </div>
+        <section className="py-14 lg:py-28 relative lg:w-[70%]">
+          <h1 className="text-4xl lg:text-6xl font-bold text-secondary-500 mb-8">Protegemos a la victima de violencia</h1>
+          <p className="text-2xl lg:text-4xl text-white lg:leading-relaxed">
+            Creemos en el poder transformador de la comunicación, el don de saber escuchar, la toma de conciencia, la empatía y apoyo entre personas.
+          </p>
         </section>
       </Container>
       <Container bgColorClass="bg-white">
         <section className="py-12">
-          <h2 className="text-3xl text-primary-800">Noticias</h2>
-          <NewsCardList />
+          <h2 className="text-3xl lg:text-4xl font-bold text-primary-800 mb-12">Ultimas actividades</h2>
+          <IndexNewsCardList />
         </section>
       </Container>
       <Container bgColorClass="bg-primary-50">
@@ -81,13 +51,13 @@ export default function Page() {
           <PosterGallery posters={posters} />
         </section>
       </Container>
-      <Container bgColorClass="bg-white">
+      {/* <Container bgColorClass="bg-white">
         <section className="py-12">
           <Entities />
         </section>
-      </Container>
+      </Container> */}
       <Container bgColorClass="bg-white">
-        <AnimationWrapper initialClass="opacity-0" animationClass="lg:animate-[800ms_ease-in-out_forwards_fade-in]" threshold={1}>
+        <AnimationWrapper initialClass="lg:opacity-0" animationClass="lg:animate-[800ms_ease-in-out_forwards_fade-in]" threshold={1}>
           <EndPhrase textColorClass="text-secondary-500">Nada es tan fuerte como la ayuda a través de la comprensión</EndPhrase>
         </AnimationWrapper>
       </Container>
