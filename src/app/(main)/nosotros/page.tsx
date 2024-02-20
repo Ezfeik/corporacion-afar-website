@@ -5,7 +5,7 @@ import FlagIcon from '@/components/icons/Flag'
 import HeartIcon from '@/components/icons/Heart'
 import SectionTitle from '@/components/sections/SectionTitle'
 import React, { ReactElement } from 'react'
-import { handsImg, talkImg } from '@/constants/images'
+import { handsLoopImg, talkImg } from '@/constants/images'
 import ImgText from '@/components/sections/ImgText'
 
 
@@ -88,23 +88,23 @@ function Page() {
       <Container bgColorClass='bg-secondary-50'>
         <AboutUsContainer />
       </Container>
-      <Container>
-        <div className='py-12 lg:py-24'>
-          <div>
-            <ImgText 
-              img={talkImg} 
-              title='Apoyamos'
-              text={'Entregamos atención a víctimas de violencia de cualquier fuente mediante un modelo de intervención integral, con énfasis en la prevención y acompañado de una reparación y restauración del grupo familiar.'}  
-            />
-          </div>
-          <div className='mt-8 lg:mt-16'>
-            <ImgText 
-              img={handsImg} 
-              title='Concientizamos' 
-              text={'Promovemos proyectos a importantes entidades, realizamos capacitaciones del ambito psicosocial/jurídico y talleres preventivos de violencia dirigidas a todo público.'} 
-              reverse
-            />
-          </div>
+      <Container bgColorClass='lg:bg-two-color-secondary-right'>
+        <div className='mt-12 lg:mt-24 mb-12 lg:mb-16'>
+          <ImgText 
+            img={talkImg} 
+            title='Apoyamos'
+            text={'Entregamos atención a víctimas de violencia de cualquier fuente mediante un modelo de intervención integral, con énfasis en la prevención y acompañado de una reparación y restauración del grupo familiar.'}  
+          />
+        </div>
+      </Container>
+      <Container bgColorClass='lg:bg-two-color-secondary-left'>
+        <div className='mb-12 lg:mb-24'>
+          <ImgText 
+            img={handsLoopImg} 
+            title='Concientizamos' 
+            text={'Promovemos proyectos a importantes entidades, realizamos capacitaciones del ambito psicosocial/jurídico y talleres preventivos de violencia dirigidas a todo público.'} 
+            reverse
+          />
         </div>
       </Container>
       <Container>
