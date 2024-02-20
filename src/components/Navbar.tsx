@@ -8,8 +8,8 @@ import Hamburger from "./icons/Hamburger";
 import Times from "./icons/Times";
 
 const navListContainerClass = "bg-secondary-600 lg:bg-transparent fixed lg:static top-0 -right-full h-[100vh] lg:h-fit w-[70%] lg:w-fit px-8 py-4 lg:p-0 transition-[right] duration-500";
-const navListClass = "flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8";
-const linkClass = "text-lg text-secondary-50 lg:text-primary-900 opacity-70 hover:opacity-100 antialiased after:block after:w-0 after:opacity-0 after:border-b-2 after:border-b-secondary-50 lg:after:border-b-primary-900 after:transition-all after:ease-in-out after:duration-300 hover:after:w-full hover:after:opacity-100";
+const navListClass = "flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6";
+const linkClass = "text-lg text-secondary-50 lg:text-primary-900 opacity-60 hover:opacity-100 antialiased after:block after:w-0 after:opacity-0 after:border-b-2 after:border-b-secondary-50 lg:after:border-b-primary-900 after:transition-all after:ease-in-out after:duration-300 hover:after:w-full hover:after:opacity-100";
 const linkActiveClass = "text-lg text-secondary-50 lg:text-primary-900 antialiased after:block after:w-full after:border-b-2 after:border-b-secondary-50 lg:after:border-b-primary-900";
 const toggleButtonClass = "block lg:hidden"
 
@@ -73,7 +73,7 @@ export default function Navbar({ links, logo }: { links: navLinkType[], logo: { 
     <nav className="bg-opacity-95 shadow-md sticky top-0 h-16 lg:h-20 duration-500 ease-in-out transition-[top] z-50">
       <Container bgColorClass="bg-primary-50">
         <div className="flex flex-row justify-between items-center relative">
-          <img className="h-16 lg:h-20" src={logo.src} alt={logo.alt} />
+          <Link href="/"><img className="h-16 lg:h-20" src={logo.src} alt={logo.alt} /></Link>
           <NavbarList 
             pathname={pathname} 
             links={links} 
