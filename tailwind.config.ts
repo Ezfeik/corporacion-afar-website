@@ -10,14 +10,15 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'img-logo': 'url("/img/logo.webp")',
-        'img-hands': 'url("/img/backgrounds/hands.jpg")',
+        'img-hands': 'url("/img/backgrounds/hands-mirror.jpg")',
         'img-hands-loop': 'url("/img/backgrounds/hands-loop.jpg")',
         'img-violence': 'url("/img/backgrounds/violence.jpg")',
         'img-books': 'url("/img/backgrounds/books.jpg")',
         'img-talk': 'url("/img/backgrounds/talk.jpg")',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'two-color-secondary-right': 'linear-gradient(to right, #ffffff 0%, #ffffff 52%, #fee5e9 52%, #ffffff 100%)',
+        'two-color-secondary-left': 'linear-gradient(to right, #ffffff 0%, #fee5e9 48%, #ffffff  48%, #ffffff 100%)'
       },
       colors: {
         'primary': {
