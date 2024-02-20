@@ -10,6 +10,10 @@ export const navLinks: navLinkType[] = [
     name: 'Sobre Nosotros'
   },
   {
+    href: '/noticias',
+    name: 'Noticias'
+  },
+  {
     href: '/biblioteca',
     name: 'Biblioteca Afar'
   },
