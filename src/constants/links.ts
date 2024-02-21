@@ -14,10 +14,6 @@ export const navLinks: navLinkType[] = [
     name: 'Noticias'
   },
   {
-    href: '/biblioteca',
-    name: 'Biblioteca Afar'
-  },
-  {
     href: '/contacto',
     name: 'Contacto'
   },
