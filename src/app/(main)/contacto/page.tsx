@@ -27,10 +27,10 @@ function Page() {
                   <MailIcon colorClass={'stroke-primary-950'} width='w-7' height='h-7' />contacto@corporacionafar.cl
                 </li>
                 <li className='flex flex-row gap-2'>
-                  <PhoneIcon colorClass={'stroke-primary-950'} width='w-7' height='h-7' />+56-91234578
+                  <PhoneIcon colorClass={'stroke-primary-950'} width='w-7' height='h-7' />+56-991217995
                 </li>
                 <li className='flex flex-row gap-2'>
-                  <PhoneIcon colorClass={'stroke-primary-950'} width='w-7' height='h-7' />+56-91234578
+                  <PhoneIcon colorClass={'stroke-primary-950'} width='w-7' height='h-7' />+56-957809517
                 </li>
               </ul>
               <h2 className="text-2xl font-bold mb-4">Nuestras Redes</h2>
