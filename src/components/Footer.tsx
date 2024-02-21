@@ -48,13 +48,14 @@ export function Footer() {
                   <MailIcon colorClass={'stroke-primary-950'} width='w-6' height='h-6' />contacto@corporacionafar.cl
                 </li>
                 <li className='flex flex-row gap-2'>
-                  <PhoneIcon colorClass={'stroke-primary-950'} width='w-6' height='h-6' />+56-91234578
+                  <PhoneIcon colorClass={'stroke-primary-950'} width='w-6' height='h-6' />+56-991217995
                 </li>
                 <li className='flex flex-row gap-2'>
-                  <PhoneIcon colorClass={'stroke-primary-950'} width='w-6' height='h-6' />+56-91234578
+                  <PhoneIcon colorClass={'stroke-primary-950'} width='w-6' height='h-6' />+56-957809517
                 </li>
               </ul>
               <SocialNetworks fillColorClass="fill-primary-950" />
+              <img className='w-2/3 pt-4' src="/img/logo-gore.png" alt="Logo Gobierno Regional de Los Lagos" />
             </div>
           </div>
           <div className="text-gray-400 mx-auto text-sm py-4">
