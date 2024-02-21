@@ -23,12 +23,6 @@ const PosterGallery = function({ posters }: { posters: { [key: string]: imageTyp
   )
 }
 
-const Entities = function() {
-  return (
-    <div>Con quienes hemos trabajado</div>
-  )
-}
-
 export default function Page() {
   return (
     <>
