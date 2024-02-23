@@ -1,7 +1,5 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import newsData from '@/data/news.json';
-import { NewsType } from '@/types/newsTypes';
 import { getNewsData } from '@/utils/news';
 
 

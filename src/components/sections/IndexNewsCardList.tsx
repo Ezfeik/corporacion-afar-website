@@ -29,7 +29,7 @@ export const IndexNewsCardList = function() {
             <NewsCard 
               key={news.id}
               id={news.id}
-              date={new Date(news.date)} 
+              date={news.date} 
               title={news.title} 
               cover={news.cover} 
               text={news.text} 

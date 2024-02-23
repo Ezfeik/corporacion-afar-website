@@ -37,8 +37,8 @@ export function Footer() {
             <div>
               <h2 className='text-lg font-bold mb-2'>Documentos</h2>
               <ul className='flex flex-col gap-2'>
-                <li><Link target='_blank' href="#">Organigrama</Link></li>
-                <li><Link target='_blank' href="#">Modelo prevención del delito</Link></li>
+                <li className='text-gray-400 pointer-events-none'><Link target='_blank' href="#">Organigrama</Link></li>
+                <li className='text-gray-400 pointer-events-none'><Link target='_blank' href="#">Modelo prevención del delito</Link></li>
               </ul>
             </div>
             <div>
