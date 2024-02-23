@@ -27,7 +27,7 @@ function NavbarList({ pathname, links, handleToggle, isNavbarHidden }: { pathnam
           {
             links.map(( link: navLinkType, index: number ) => (
               <li key={ index }>
-                <Link onClick={() => handleToggle(true)} className={ pathname === link.href ? linkActiveClass : linkClass } href={ link.href }>
+                <Link onClick={() => handleToggle(true)} className={ ( link.href !== '/' && pathname.startsWith(link.href) ) || (link.href === '/' && pathname === link.href) ? linkActiveClass : linkClass } href={ link.href }>
                   { link.name }
                 </Link>
               </li>
