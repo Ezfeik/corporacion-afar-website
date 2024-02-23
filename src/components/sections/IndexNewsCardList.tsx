@@ -10,11 +10,14 @@ export const IndexNewsCardList = function() {
 
   useEffect(() => { 
     setLoading(true);
-    setData(newsData.sort((a, b) => {
-      const dateA: any = new Date(a.date);
-      const dateB: any = new Date(b.date);
-      return dateB - dateA;
-    }).slice(0, 2));
+    setData(newsData
+      .filter((news) => news.type === "news")
+      .sort((a, b) => {
+        const dateA: any = new Date(a.date);
+        const dateB: any = new Date(b.date);
+        return dateB - dateA;
+      })
+      .slice(0, 4));
     setLoading(false);
   }, [])
   
