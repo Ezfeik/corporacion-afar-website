@@ -10,20 +10,23 @@ import ImgText from '@/components/sections/ImgText'
 
 
 type MemberType = {
+  profileImg?: string;
   name: string;
   role: string;
-  email: string;
+  email?: string;
 }
 
 const members: MemberType[] = [
-  {name: 'Carla Gallardo Jara', role: 'Presidenta', email: 'c.gallardo@corporacionafar.cl'},
-  {name: 'Ximena Mancilla Oyarzo', role: 'Vicepresidenta', email: 'x.mancilla@corporacionafar.cl'},
-  {name: 'Moira Cuevas Villouta', role: 'Directora', email: 'm.cuevas@corporacionafar.cl'},
+  {profileImg: '/img/profiles/carla-gallardo.jpg', name: 'Carla Gallardo Jara', role: 'Presidenta', email: 'c.gallardo@corporacionafar.cl'},
+  {profileImg: '/img/profiles/ximena-mancilla.jpg', name: 'Ximena Mancilla Oyarzo', role: 'Vicepresidenta', email: 'x.mancilla@corporacionafar.cl'},
+  {profileImg: '/img/profiles/moira-cuevas.jpg', name: 'Moira Cuevas Villouta', role: 'Directora', email: 'm.cuevas@corporacionafar.cl'},
+  {profileImg: '/img/profiles/adolfo-mancilla.jpg', name: 'Adolfo Mancilla Uribe', role: 'Secretario'},
+  {profileImg: '/img/profiles/diana-zapata.jpg', name: 'Diana Zapata Rebolledo', role: 'Tesorera'},
 ]
 
 const TeamCardList = function({ members }: { members: MemberType[] }) {
   return (
-    <ul className='grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-0'>
+    <ul className='grid grid-cols-1 lg:grid-cols-3 justify-items-center gap-6'>
       { members.map((member) => <TeamCard key={member.name} member={member} />) }
     </ul>
   )
@@ -31,12 +34,17 @@ const TeamCardList = function({ members }: { members: MemberType[] }) {
 
 const TeamCard = function({ member }: { member: MemberType }) {
   return (
-    <li className='mx-auto py-12 px-8 bg-primary-50 shadow-md'>
-      <img className='mx-auto border-2 border-primary-900 rounded-full w-40 h-40 mb-8' src="/img/favicon.png" alt="perfil sin imagen" />
-      <div className='mx-auto text-center'>
+    <li className='bg-primary-50 shadow-md px-6 py-12 w-72 h-96'>
+      <img className='mx-auto border-2 border-primary-900 rounded-full w-2/3 mb-6' src={member.profileImg} alt={member.name} />
+      <div className='text-center'>
         <h3 className='text-xl'>{member.name}</h3>
         <p className='italic border-b-2 pb-2 mb-2'>{member.role}</p>
-        <a className='font-bold text-primary-700' href={`mailto:${member.email}`}>{member.email}</a>
+        {
+          member.email ?
+            <a className='text-md font-bold text-primary-700' href={`mailto:${member.email}`}>{member.email}</a>
+            : <p className='text-small text-gray-400'>Corporación Afar</p>
+        }
+        
       </div>
     </li>
   )
