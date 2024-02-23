@@ -8,16 +8,13 @@ import { IndexNewsCardList } from "@/components/sections/IndexNewsCardList";
 
 const PosterGallery = function({ posters }: { posters: { [key: string]: imageType } }) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-8">
-      <img className="row-span-4 lg:row-span-5" src={posters.vejez.src} alt="" />
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 lg:gap-8">
       <img className="row-span-2" src={posters.angela.src} alt="" />
       <img className="row-span-1" src={posters.charlotte.src} alt="" />
-      <img className="row-span-4 lg:row-span-5" src={posters.indicadores.src} alt="" />
       <img className="row-span-1" src={posters.hombre1.src} alt="" />
       <img className="row-span-1" src={posters.hombre2.src} alt="" />
       <img className="row-span-2" src={posters.jiddu.src} alt="" />
       <img className="row-span-1" src={posters.mujer1.src} alt="" />
-      <img className="row-span-2" src={posters.poderViolencia.src} alt="" />
       <img className="row-span-1" src={posters.virginia.src} alt="" />
     </div>
   )
