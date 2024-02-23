@@ -1,6 +1,6 @@
-import React from 'react';
 import newsData from '@/data/news.json';
 import Container from '@/components/Container';
+import NewsContent from '@/components/sections/noticias/NewsContent';
 
 export function generateStaticParams() {
   return newsData.map((news) => ({
@@ -11,7 +11,7 @@ export function generateStaticParams() {
 function Page({ params }: { params: { id: string } }) {
   return (
     <Container>
-      <h1>Hola desde la noticia {params.id}</h1>
+      <NewsContent newsId={parseInt(params.id)} />
     </Container>
   )
 }
