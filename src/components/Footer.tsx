@@ -37,8 +37,8 @@ export function Footer() {
             <div>
               <h2 className='text-lg font-bold mb-2'>Documentos</h2>
               <ul className='flex flex-col gap-2'>
-                <li className='text-gray-400 pointer-events-none'><Link target='_blank' href="#">Organigrama</Link></li>
-                <li className='text-gray-400 pointer-events-none'><Link target='_blank' href="#">Modelo prevención del delito</Link></li>
+                <li><Link href="/organigrama/">Organigrama</Link></li>
+                <li><Link target='_blank' href="/pdf/modelo-prevencion-delito.pdf">Modelo prevención del delito</Link></li>
               </ul>
             </div>
             <div>
@@ -55,7 +55,7 @@ export function Footer() {
                 </li>
               </ul>
               <SocialNetworks fillColorClass="fill-primary-950" />
-              <img className='w-2/3 pt-4' src="/img/logo-gore.png" alt="Logo Gobierno Regional de Los Lagos" />
+              <img className='w-2/3 pt-4' src="/img/logo-gore.webp" alt="Logo Gobierno Regional de Los Lagos" />
             </div>
           </div>
           <div className="text-gray-400 mx-auto text-sm py-4">
