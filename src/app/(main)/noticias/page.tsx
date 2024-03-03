@@ -2,6 +2,11 @@ import Container from '@/components/Container'
 import SectionTitle from '@/components/sections/SectionTitle'
 import React from 'react'
 import { NewsCardList } from '@/components/sections/noticias/NewsCardList';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Corporación Afar - Noticias'
+}
 
 function Page() {
   return (
