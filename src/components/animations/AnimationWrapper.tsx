@@ -1,3 +1,4 @@
+"use client"
 import React, { ReactElement, useEffect, useRef, useState } from 'react'
 
 function AnimationWrapper({ initialClass = "", animationClass, visited = false, threshold, children }: { initialClass?: string, animationClass: string, visited?: boolean, threshold?: number, children: ReactElement }) {
