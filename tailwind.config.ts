@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'img-logo': 'url("/img/logo.webp")',
-        'img-hands': 'url("/img/backgrounds/hands-mirror.jpg")',
+        'img-hands': 'url("/img/backgrounds/hands-mirror.webp")',
         'img-hands-loop': 'url("/img/backgrounds/hands-loop.jpg")',
         'img-violence': 'url("/img/backgrounds/violence.jpg")',
         'img-books': 'url("/img/backgrounds/books.jpg")',
@@ -77,6 +77,10 @@ const config: Config = {
         'fade-in-up': {
           '0%': { opacity: '0', position: 'relative', top: '8px', pointerevents: 'none' },
           '100%': { opacity: '1', position: 'relative', top: '0', pointerevents: 'auto' }
+        },
+        'opacity-in-75': {
+          '0%': { opacity: '0'},
+          '100%': { opacity: '1'}
         },
       }
     },
