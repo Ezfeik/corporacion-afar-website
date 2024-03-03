@@ -1,4 +1,3 @@
-"use client"
 import React from 'react'
 import SectionTitle from '@/components/sections/SectionTitle';
 import Container from '@/components/Container';
@@ -6,6 +5,11 @@ import SocialNetworks from '@/components/SocialNetworks';
 import MailIcon from '@/components/icons/Mail';
 import PhoneIcon from '@/components/icons/Phone';
 import AnimationWrapper from '@/components/animations/AnimationWrapper';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Corporación Afar - Contacto'
+}
 
 function Page() {
   return (
