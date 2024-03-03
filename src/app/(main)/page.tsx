@@ -1,10 +1,16 @@
-'use client'
 import AnimationWrapper from "@/components/animations/AnimationWrapper";
 import Container from "@/components/Container";
 import EndPhrase from '@/components/sections/EndPhrase';
 import { posters } from '@/constants/images';
 import { imageType } from "@/types/imgTypes";
 import { IndexNewsCardList } from "@/components/sections/IndexNewsCardList";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Corporación Afar',
+  description: 'Corporación AFAR (Ayuda en la Familia en Riesgo). Somos una corporación sin fines de lucro, ubicados en Puerto Montt, dedicados en entregar apoyo a quienes sufren de violencia intrafamiliar',
+}
+
 
 const PosterGallery = function({ posters }: { posters: { [key: string]: imageType } }) {
   return (
@@ -33,7 +39,7 @@ export default function Page() {
       </Container>
       <Container bgColorClass="bg-white">
         <section className="py-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary-800 mb-12">Ultimas actividades</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-primary-800 mb-12">Últimas actividades</h2>
           <IndexNewsCardList />
         </section>
       </Container>
@@ -42,11 +48,6 @@ export default function Page() {
           <PosterGallery posters={posters} />
         </section>
       </Container>
-      {/* <Container bgColorClass="bg-white">
-        <section className="py-12">
-          <Entities />
-        </section>
-      </Container> */}
       <Container bgColorClass="bg-white">
         <AnimationWrapper initialClass="lg:opacity-0" animationClass="lg:animate-[800ms_ease-in-out_forwards_fade-in]" threshold={1}>
           <EndPhrase textColorClass="text-secondary-500">Nada es tan fuerte como la ayuda a través de la comprensión</EndPhrase>
