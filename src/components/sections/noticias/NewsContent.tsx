@@ -11,7 +11,7 @@ function NewsContent({ newsId }: { newsId: number }) {
     : data.type === 'news' ?
     (
       <div className='w-full lg:w-3/5 mx-auto py-8'>
-        <img className='mx-auto max-h-96 w-full object-cover mb-8' src={data!.cover!.src} alt={data!.cover!.alt} />
+        <img className='mx-auto max-h-96 w-full object-cover mb-8' src={data!.fullCover!.src} alt={data!.fullCover!.alt} />
         <h2 className='text-3xl text-primary-800 font-bold mb-1'>{data.title}</h2>
         {/* SOLUCION RARA */}
         <span className='block text-md text-gray-500 mb-6'>{new Date(data.date || '').toLocaleDateString()}</span>
@@ -26,7 +26,7 @@ function NewsContent({ newsId }: { newsId: number }) {
         {/* SOLUCION RARA */}
         <span className='block text-md text-gray-500 mb-6'>{new Date(data.date || '').toLocaleDateString()}</span>
         {/* SOLUCION RARA */}
-        <img className='mx-auto w-full object-cover mb-8' src={data!.cover!.src} alt={data!.cover!.alt} />
+        <img className='mx-auto w-full object-cover mb-8' src={data!.fullCover!.src} alt={data!.fullCover!.alt} />
       </div>
     ) 
   )
