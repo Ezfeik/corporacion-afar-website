@@ -6,7 +6,7 @@
     "title": "Junta con SEREMI de la mujer y equidad de género",
     "cover": { "src": "/img/news/covers/reu-seremi.webp", "alt": "Reunion con SEREMI de la mujer y equidad de género" },
     "fullCover": { "src": "/img/news/full-covers/reu-seremi.webp", "alt": "Reunion con SEREMI de la mujer y equidad de género" },
-    "text": "Gestionando alianzas que permitirán realizar un trabajo en conjunto con la Seremi Mujer y de la Equidad de Género de Los Lagos, Macarena Gre Berrios. Para ir en ayuda a la comunidad y poder prevenir la Violencia intrafamiliar. Seremi @macarenagreb se reúne con Corporación AFAR [Ayuda a la Familia en Riesgo] para proyectar alianzas enfocadas a prevenir la violencia intrafamiliar."
+    "text": "Nos encontramos gestionando alianzas que permitirán realizar un trabajo en conjunto con la Seremi Mujer y de la Equidad de Género de Los Lagos, Macarena Gre Berrios, para ir en ayuda a la comunidad y poder prevenir la Violencia intrafamiliar."
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "title": "Visita al alcade de Puerto Montt",
     "cover": { "src": "/img/news/covers/reu-alcalde.webp", "alt": "Reunion con alcalde de Puerto Montt" },
     "fullCover": { "src": "/img/news/full-covers/reu-alcalde.webp", "alt": "Reunion con alcalde de Puerto Montt" },
-    "text": "Reunión con Corporación Ayuda a la Familia en Riesgo: Una reunión de presentación respecto a variadas temáticas que están abordando, como es estudiar las posibilidades de entregar en comodato un espacio físico para incrementar sus atenciones, efectuó la Corporación Ayuda a la Familia en Riesgo, AFAR, con el alcalde Gervoy Paredes acompañado por la directora de Dideco, Jacqueline Paz. De la misma forma, desplegar una labor conjunta para que con un enfoque multidisciplinario, se pueda incrementar la calidad de vida de quienes son objeto de Violencia Intrafamiliar. Al respecto, las representantes de AFAR detallaron que están cubriendo un promedio de 7 a 10 casos mensualmente. Del mismo modo, proyecta —en un trabajo con la Municipalidad de Puerto Montt— brindar más de 80 tratamientos anualmente en la capital regional."
+    "text": "Reunión con alcalde de la comuna de Puerto Montt, Gervoy Paredes Rojas. Una reunión de presentación respecto a variadas temáticas que nos encontramos abordando, como estudiar las posibilidades de entregar en comodato un espacio físico para incrementar las atenciones, esto acompañado por la directora de Dideco, Jacqueline Paz. De la misma forma, poder desplegar una labor conjunta para que con un enfoque multidisciplinario, se pueda incrementar la calidad de vida de quienes son objeto de Violencia Intrafamiliar. Al respecto, nuestras representantes de AFAR detallaron que nos encontramos cubriendo un promedio de 7 a 10 casos mensualmente. Del mismo modo, se proyecta en un trabajo con la Municipalidad de Puerto Montt brindar más de 80 tratamientos anualmente en la capital regional."
   },
   {
     "id": 3,
@@ -52,5 +52,14 @@
     "cover": { "src": "/img/news/covers/vejez.webp", "alt": "Infografía sobre violencia en la vejez" },
     "fullCover": { "src": "/img/news/full-covers/vejez.webp", "alt": "Infografía sobre violencia en la vejez" },
     "text": "Infografía sobre violencia en la vejez."
+  },
+  {
+    "id": 7,
+    "type": "news",
+    "date": "2024-02-28",
+    "title": "Reunión con Delegada Presidencial de Los Lagos",
+    "cover": { "src": "/img/news/covers/reu-delegada.webp", "alt": "Miembros de corporación afar en una reunión con delegada presidencial de los lagos" },
+    "fullCover": { "src": "/img/news/full-covers/reu-delegada.webp", "alt": "Miembros de corporación afar en una reunión con delegada presidencial de los lagos" },
+    "text": "Durante la tarde, miembros de nuestra corporación se reunieron con la Delegada Presidencial Regional de Los Lagos, Claudia Pailalef, donde se discutió sobre temas de violencia en las familias y prevención en la comuna."
   }
 ]
