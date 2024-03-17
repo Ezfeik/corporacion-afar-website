@@ -22,6 +22,10 @@ const PosterGallery = function({ posters }: { posters: { [key: string]: imageTyp
       <img className="row-span-2" src={posters.jiddu.src} alt="" />
       <img className="row-span-1" src={posters.mujer1.src} alt="" />
       <img className="row-span-1" src={posters.virginia.src} alt="" />
+      <video controls height="240" className="col-span-3 w-3/4 mx-auto">
+        <source src="/video/violencia_en_familias.webm" type="video/webm"/>
+        <p>Su navegador no es compatible con videos HTML5.</p>
+      </video>
     </div>
   )
 }
