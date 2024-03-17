@@ -13,7 +13,7 @@ const config: Config = {
         'img-hands': 'url("/img/backgrounds/hands-mirror.webp")',
         'img-hands-loop': 'url("/img/backgrounds/hands-loop.jpg")',
         'img-violence': 'url("/img/backgrounds/violence.jpg")',
-        'img-books': 'url("/img/backgrounds/books.jpg")',
+        'img-books': 'url("/img/backgrounds/books.webp")',
         'img-talk': 'url("/img/backgrounds/talk.jpg")',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
