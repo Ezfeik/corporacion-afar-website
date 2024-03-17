@@ -13,14 +13,14 @@ export const talkImg = {
   alt: 'Dos personas desde la cintura para abajo tomandose las manos sentados en una cama'
 } 
 export const posters: { [key: string]: imageType } = { 
-    angela: { src: '/img/posters/angela.webp', alt: '' },
-    charlotte: { src: '/img/posters/charlotte.webp', alt: '' },
-    hombre1: { src: 'img/posters/hombre-1.webp', alt: '' },
-    hombre2: { src: 'img/posters/hombre-2.webp', alt: '' },
-    indicadores: { src: 'img/posters/indicadores.jpg', alt: '' },
-    jiddu: { src: 'img/posters/jiddu.webp', alt: '' },
-    mujer1: { src: 'img/posters/mujer-1.webp', alt: '' },
-    poderViolencia: { src: 'img/posters/poder-violencia.webp', alt: '' },
-    vejez: { src: 'img/posters/vejez.jpg', alt: '' },
-    virginia: { src: 'img/posters/virginia.webp', alt: '' },
-  }
+  angela: { src: '/img/posters/angela.webp', alt: '' },
+  charlotte: { src: '/img/posters/charlotte.webp', alt: '' },
+  hombre1: { src: 'img/posters/hombre-1.webp', alt: '' },
+  hombre2: { src: 'img/posters/hombre-2.webp', alt: '' },
+  indicadores: { src: 'img/posters/indicadores.jpg', alt: '' },
+  jiddu: { src: 'img/posters/jiddu.webp', alt: '' },
+  mujer1: { src: 'img/posters/mujer-1.webp', alt: '' },
+  poderViolencia: { src: 'img/posters/poder-violencia.webp', alt: '' },
+  vejez: { src: 'img/posters/vejez.jpg', alt: '' },
+  virginia: { src: 'img/posters/virginia.webp', alt: '' },
+}
