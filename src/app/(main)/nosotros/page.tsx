@@ -83,7 +83,7 @@ const AboutUsContainer = function() {
   )
 }
 
-const OurStoryContent = function () {
+const OurHistoryContent = function () {
   return (
     <div className='px-0 lg:px-20 pt-7 lg:pt-14 text-xl leading-relaxed'>
       <p className='mb-7'>
@@ -99,7 +99,7 @@ const OurStoryContent = function () {
       <p className='mb-7'>
         La violencia Intrafamiliar lamentablemente se vive dentro de los hogares, en las familias. 
         Es una realidad donde mayoritariamente la viven las <b>mujeres</b>, pero no está ajena la 
-        violencia hacia los <b>niños, adolescentes, hombres y personas mayores</b>, personas de la <b>comunidad LGBTQ+</b>. 
+        violencia hacia los <b>niños, adolescentes, hombres, personas mayores</b> o personas de la <b>comunidad LGBTQ+</b>. 
         Esta es la principal motivación de AFAR y nos preguntarnos: 
         ¿Dónde busca ayuda un adulto mayor, un hombre, un adolescente una persona de la comunidad LGBTQ+? 
         Es ahí que surge el dilema. Muchos hombres y adultos mayores sufren en silencio la 
@@ -111,6 +111,36 @@ const OurStoryContent = function () {
         y acompañará a las personas que viven violencia, pero con el gran desafío de involucrar a toda la comunidad.
       </p>
     </div>
+  )
+}
+
+const OurHistoryContainer = function () {
+  return (
+    <Container bgColorClass='bg-primary-50'>
+      <div className='py-12 my-12'>
+        <AnimationWrapper initialClass="lg:opacity-0" animationClass="lg:animate-[800ms_ease-in-out_forwards_fade-in]" threshold={1}>
+          <SectionTitle textColorClass="text-primary-800" decoratorColorClass="bg-primary-800">Nuestra Historia</SectionTitle>
+        </AnimationWrapper>
+        <AnimationWrapper initialClass="lg:opacity-0" animationClass="lg:animate-[800ms_ease-in-out_forwards_fade-in]" threshold={0.3}>
+          <OurHistoryContent />
+        </AnimationWrapper>
+      </div>
+    </Container>
+  )
+}
+
+const OurMembersContainer = function () {
+  return (
+    <Container>
+      <div className='mb-12'>
+        <AnimationWrapper initialClass="lg:opacity-0" animationClass="lg:animate-[800ms_ease-in-out_forwards_fade-in]" threshold={1}>
+          <SectionTitle textColorClass="text-secondary-500" decoratorColorClass="bg-secondary-500">Nuestro Equipo</SectionTitle>
+        </AnimationWrapper>
+        <div className='pt-7 lg:pt-14'>
+          <TeamCardList members={members} />
+        </div>
+      </div>
+    </Container>
   )
 }
 
@@ -131,9 +161,9 @@ function Page() {
           <div className='pt-12 lg:pt-24 pb-6 lg:pb-12'>
             <SectionTitle textColorClass="text-secondary-500" decoratorColorClass="bg-secondary-500">Sobre Nosotros</SectionTitle>
           </div>
-          <p className='w-[90%] lg:w-3/5 mx-auto pb-12 lg:pb-24 text-xl lg:text-2xl leading-relaxed text-center text-gray-800'>
+          <p className='w-[90%] lg:w-3/5 mx-auto pb-12 lg:pb-24 text-xl lg:text-2xl lg:leading-relaxed text-center text-gray-800'>
             Somos una corporación privada, sin fines de lucro que protege y defiende los derechos de las víctimas de violencia intrafamiliar hacia
-            mujeres, niños, adolescentes, hombres y la vejez.
+            mujeres, niños, adolescentes, hombres y las personas mayores.
           </p>
         </>
       </Container>
@@ -159,28 +189,8 @@ function Page() {
           />
         </div>
       </Container>
-      {/* Our Story */}
-      <Container bgColorClass='bg-primary-50'>
-        <div className='py-12 my-12'>
-          <AnimationWrapper initialClass="lg:opacity-0" animationClass="lg:animate-[800ms_ease-in-out_forwards_fade-in]" threshold={1}>
-            <SectionTitle textColorClass="text-primary-800" decoratorColorClass="bg-primary-800">Nuestra Historia</SectionTitle>
-          </AnimationWrapper>
-          <AnimationWrapper initialClass="lg:opacity-0" animationClass="lg:animate-[800ms_ease-in-out_forwards_fade-in]" threshold={0.3}>
-            <OurStoryContent />
-          </AnimationWrapper>
-        </div>
-      </Container>
-      {/* Members */}
-      <Container>
-        <div className='mb-12'>
-          <AnimationWrapper initialClass="lg:opacity-0" animationClass="lg:animate-[800ms_ease-in-out_forwards_fade-in]" threshold={1}>
-            <SectionTitle textColorClass="text-secondary-500" decoratorColorClass="bg-secondary-500">Nuestro Equipo</SectionTitle>
-          </AnimationWrapper>
-          <div className='pt-7 lg:pt-14'>
-            <TeamCardList members={members} />
-          </div>
-        </div>
-      </Container>
+      <OurMembersContainer />
+      <OurHistoryContainer />
     </section>
   )
 }
