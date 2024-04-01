@@ -20,11 +20,11 @@ function Page() {
         </div>
         <AnimationWrapper initialClass="lg:opacity-0 lg:pointer-events-none" animationClass="lg:animate-[700ms_ease-in-out_forwards_fade-in]">
           <div className="grid lg:grid-cols-2 text-primary-950">
-            <div className="border-b-2 border-b-primary-100 lg:border-b-0 lg:border-e-2 lg:border-e-primary-100 lg:px-24 pb-6">
+            <div className="py-4 border-b-2 border-b-primary-100 lg:border-b-0 lg:border-e-2 lg:border-e-primary-100 lg:px-24 pb-6">
               <h2 className="font-bold text-2xl lg:text-3xl mb-4">Estamos Contigo</h2>
               <p className="text-xl leading-relaxed">Estamos aquí para ofrecerte apoyo, comprensión y escucha en cualquier momento. Tu bienestar es nuestra prioridad.</p>
             </div>
-            <div className="py-6 lg:px-24">
+            <div className="py-4 lg:px-24">
               <h2 className="text-2xl font-bold mb-4">Contáctanos</h2>
               <ul className='flex flex-col gap-3 mb-8 text-lg'>
                 <li className='flex flex-row gap-2'>
